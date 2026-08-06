@@ -1,0 +1,31 @@
+from setuptools import find_packages, setup
+
+package_name = 'swarm_node'
+
+setup(
+    name=package_name,
+    version='0.0.0',
+    packages=find_packages(exclude=['test']),
+    data_files=[
+        ('share/ament_index/resource_index/packages',
+            ['resource/' + package_name]),
+        ('share/' + package_name, ['package.xml']),
+        ('share/' + package_name + '/launch', ['launch/hover_launch.py']),
+    ],
+    install_requires=['setuptools'],
+    zip_safe=True,
+    maintainer='ayush',
+    maintainer_email='ayush.acharya2027@gmail.com',
+    description='TODO: Package description',
+    license='TODO: License declaration',
+    tests_require=['pytest'],
+    entry_points={
+        'console_scripts': [
+            'rgb_node = swarm_node.rgb_node:main',
+            'view_image = swarm_node.frame_check:main',
+            'param_node = swarm_node.prerna_node:main',
+            'sound_pub = swarm_node.sound_pub:main',
+            'sound_sub = swarm_node.sound_sub:main '
+        ],
+    },
+)

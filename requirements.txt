@@ -1,0 +1,12 @@
+# Hardware & Web Communication
+MAVProxy
+pymavlink
+pyserial
+pynmeagps
+future
+geopy
+streamlit
+folium
+streamlit-folium
+geocoder
+ultralytics
